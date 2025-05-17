@@ -1,10 +1,3 @@
-const burger = document.getElementById("burger");
-const navLinks = document.getElementById("nav-links");
-
-burger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
 document.getElementById("image").addEventListener("change", function () {
   const fileName = this.files[0] ? this.files[0].name : "Нет файла";
   document.querySelector(".icon-attach").style.display = "none";
