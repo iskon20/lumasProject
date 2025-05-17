@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <nav>
+          <a href="index.html">
+            <div class="logo">
+              <img src="../../assets/img/logo.png" alt="logo" />
+            </div>
+          </a>
+
+          <div class="burger" id="burger">☰</div>
+
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#ourGoals">Our Goals</a></li>
+            <li><a href="../../index.html#learners">Our Learners</a></li>
+            <li><a href="">Translater</a></li>
+            <li><a href="gpt.html">ChatGPT</a></li>
+            <li><a href="AjouNet.html">Community Chat</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="chat-with-gpt">
+      <h1>Chat with AI Assistent</h1>
+      <div class="gpt-cont">
+        <div class="user-cont">
+          <img src="../img/ChatGPTLogo.png" alt="" />
+          <h2>ChatGPT</h2>
+        </div>
+        <div id="chat-container" class="chat-container"></div>
+        <div class="input-container">
+          <input type="text" id="user-input" placeholder="Type a message..." />
+          <button onclick="handleSend()">
+            <img src="../img/send.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="speaking-with-chat">
+      <h1>Speaking With Your AI Assistent</h1>
+      <div onclick="startRecognition()" id="startRecord" class="startRecord">
+        <h2>Tap To Talk</h2>
+      </div>
+
+      <div class="info">
+        <div
+          id="loader-animation"
+          class="animated"
+          style="width: 300px; height: 300px; display: none"
+        ></div>
+        <div
+          id="recognition-animation"
+          class="animated"
+          style="width: 40vw; height: 40vw; display: none"
+        ></div>
+        <div
+          id="voice-animation"
+          class="animated"
+          style="width: 300px; height: 300px; display: none"
+        ></div>
+      </div>
+      <p id="result"></p>
+    </section>
+
+    <!-- <div>
+      <button onclick="startRecognition()">🎙️ Говорить</button>
+      <button onclick="speakText('Прверка связи')">➡️ тест</button>
+      <button onclick="sendToGPT('Прверка связи')">➡️ gpt</button>
+    </div> -->
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <script src="../../js/connectionGpt.js"></script>
+  </body>
+</html>

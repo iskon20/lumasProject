@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styleNet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>AjouNet</title>
+  </head>
+  <body>
+    <div id="modalOverlay" class="modal-overlay show">
+      <div id="registerForm" class="modal-content" aria-hidden="false">
+        <h2>Регистрация</h2>
+        <input
+          type="text"
+          id="registerUsername"
+          placeholder="Имя пользователя"
+        />
+        <input type="password" id="registerPassword" placeholder="Пароль" />
+        <input type="file" id="registerAvatar" accept="image/*" />
+        <button onclick="registerUser()">Регистрация</button>
+        <button class="modal-close" onclick="switchModal('login')">
+          Перейти к Авторизации
+        </button>
+      </div>
+      <div id="loginForm" class="modal-content" aria-hidden="true">
+        <h2>Авторизация</h2>
+        <input type="text" id="loginUsername" placeholder="Имя пользователя" />
+        <input type="password" id="loginPassword" placeholder="Пароль" />
+        <button onclick="loginUser()">Войти</button>
+        <button class="modal-close" onclick="switchModal('register')">
+          Перейти к Регистрации
+        </button>
+      </div>
+    </div>
+
+    <div class="control-menu">
+      <div class="btn_back"><a href="../../index.html"><img src="../img/imgNet/icons/back.png" alt=""></a></div>
+      <div class="btn_logout" onclick="document.cookie = `token=; path=/; max-age=0`; location.reload();"><img src="../img/imgNet/icons/logout.png" alt=""></div>
+    </div>
+
+    <div class="wall" id="wall"></div>
+    <div id="messageForm" class="messageSection" style="display: none">
+      <div class="file-upload">
+        <input type="file" class="upload_image" id="image" accept="image/*" />
+        <label for="image" class="custom-file-upload">
+          <i class="fas fa-upload"
+            ><img class="icon icon-attach" src="../img/imgNet/icons/attach.png" alt=""
+          /></i>
+          <span id="file-name"></span>
+        </label>
+      </div>
+
+      <input
+        placeholder="Напишите сообщение..."
+        class="search"
+        type="text"
+        id="message"
+      />
+      <button
+        onclick="postMessageWithImage()"
+        style="display: none"
+        class="btn-submit"
+      >
+        <img class="icon" class="icon-submit" src="../img/imgNet/icons/submit.png" alt="" />
+      </button>
+    </div>
+
+    <script type="text/javascript" src="../../js/main.js"></script>
+  </body>
+</html>
