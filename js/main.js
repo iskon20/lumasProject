@@ -1,3 +1,10 @@
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
 document.getElementById("image").addEventListener("change", function () {
   const fileName = this.files[0] ? this.files[0].name : "Нет файла";
   document.querySelector(".icon-attach").style.display = "none";
@@ -131,7 +138,9 @@ function fetchMessages() {
         messageElement.classList.add("message");
 
         let messageContent = `
-  <img src="${msg.avatar ? msg.avatar : "../../assets/img/imgNet/anonymous.jpg"}" 
+  <img src="${
+    msg.avatar ? msg.avatar : "../../assets/img/imgNet/anonymous.jpg"
+  }" 
        alt="avatar" 
        class="avatar" 
        style="width: 50px; height: 50px; border-radius: 50%;">
@@ -197,7 +206,9 @@ function postMessageWithImage() {
     .catch((error) => console.error("Ошибка:", error));
 }
 
-const eventSource = new EventSource("https://lumasback-production.up.railway.app/events");
+const eventSource = new EventSource(
+  "https://lumasback-production.up.railway.app/events"
+);
 eventSource.onmessage = function (event) {
   if (event.data === "update") {
     fetchMessages();
