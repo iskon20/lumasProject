@@ -293,6 +293,7 @@ header {
     border: 1px solid rgb(205, 205, 205);
     border-radius: 10px;
 
+    min-height: 400px;
     width: 80%;
 
     background-color: white;
@@ -428,32 +429,6 @@ header {
     transform: scale(0.1);
   }
 }
-@media (max-width: 600px) {
-  .gpt-cont{
-    width: 100% !important;
-  }
-  
-  #loader-animation{
-    width: 40vw !important;
-  }
-
-  #recognition-animation{
-    width: 50vw !important;
-  }
-
-  .speaking-with-chat{
-    h1{
-      font-size: 2em;
-    }
-
-  }
-
-  .startRecord{
-    width: 40vw !important;
-    height: 40vw !important;
-  }
-
-}
 
 @media (max-width: 600px) {
   .progressBar {
@@ -487,6 +462,29 @@ header {
 
   .progressBar li span {
     margin-left: 15px;
+  }
+
+  .gpt-cont {
+    width: 100% !important;
+  }
+
+  #loader-animation {
+    width: 40vw !important;
+  }
+
+  #recognition-animation {
+    width: 50vw !important;
+  }
+
+  .speaking-with-chat {
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  .startRecord {
+    width: 40vw !important;
+    height: 40vw !important;
   }
 }
 
