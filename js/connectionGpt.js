@@ -82,7 +82,7 @@ async function sendToGPT() {
   LoaderAnimation.play();
 
   try {
-    const response = await fetch("http://lumasback-production.up.railway.app/api/chat", {
+    const response = await fetch("https://lumasback-production.up.railway.app/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -116,7 +116,7 @@ async function handleSend() {
   const loadingDiv = addMessageToChat("...", "gpt", true);
 
   try {
-    const res = await fetch("http://lumasback-production.up.railway.app/api/chat", {
+    const res = await fetch("https://lumasback-production.up.railway.app/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -182,7 +182,7 @@ addMessageToChat("Привет! Конечно, помогу.", "gpt");
 
 async function speakText(text) {
   try {
-    const response = await fetch("http://lumasback-production.up.railway.app/api/tts", {
+    const response = await fetch("https://lumasback-production.up.railway.app/api/tts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

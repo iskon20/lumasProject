@@ -68,7 +68,7 @@ function registerUser() {
       formData.append("avatar", avatarFile);
     }
 
-    fetch("http://lumasback-production.up.railway.app/register", {
+    fetch("https://lumasback-production.up.railway.app/register", {
       method: "POST",
       body: formData,
     })
@@ -95,7 +95,7 @@ function loginUser() {
   const password = document.getElementById("loginPassword").value;
 
   if (username != "" && password != "") {
-    fetch("http://lumasback-production.up.railway.app/login", {
+    fetch("https://lumasback-production.up.railway.app/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -121,7 +121,7 @@ function loginUser() {
 
 function fetchMessages() {
   document.getElementById("modalOverlay").style.display = "none";
-  fetch("http://lumasback-production.up.railway.app/getMessages")
+  fetch("https://lumasback-production.up.railway.app/getMessages")
     .then((response) => response.json())
     .then((messages) => {
       const wall = document.getElementById("wall");
@@ -181,7 +181,7 @@ function postMessageWithImage() {
     formData.append("image", image);
   }
 
-  fetch("http://lumasback-production.up.railway.app/postMessageWithImage", {
+  fetch("https://lumasback-production.up.railway.app/postMessageWithImage", {
     method: "POST",
     headers: {
       Authorization: token,
@@ -197,7 +197,7 @@ function postMessageWithImage() {
     .catch((error) => console.error("Ошибка:", error));
 }
 
-const eventSource = new EventSource("http://lumasback-production.up.railway.app/events");
+const eventSource = new EventSource("https://lumasback-production.up.railway.app/events");
 eventSource.onmessage = function (event) {
   if (event.data === "update") {
     fetchMessages();
