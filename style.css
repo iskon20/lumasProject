@@ -225,7 +225,7 @@ header {
   background-color: white;
 
   width: 100%;
-  margin-top: 100px;
+  margin-top: 70px;
 
   h1 {
     font-size: 3em;
@@ -393,9 +393,6 @@ header {
     text-align: center;
   }
 
-  .animated {
-  }
-
   #startRecord {
     display: flex;
     align-items: center;
@@ -421,6 +418,67 @@ header {
   animation: shrink 0.3s forwards;
 }
 
+.translater-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+
+  .text-area-result {
+    display: flex;
+    gap: 10px;
+  }
+
+  textarea {
+    width: 40vw;
+    height: 130px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+  }
+  select,
+  button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  #result {
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    width: 40vw;
+    min-height: 40px;
+    border: 1px solid #ddd;
+  }
+  #loader {
+    width: 50px;
+    height: 50px;
+    display: none;
+  }
+  .lang-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 40px;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 700;
+    transform: rotate(-2deg);
+  }
+}
+
 @keyframes shrink {
   from {
     transform: scale(1);
@@ -433,7 +491,7 @@ header {
 @media (max-width: 600px) {
   .progressBar {
     flex-direction: column;
-    align-items: center;
+    margin-left: 50px;
     height: 400px;
   }
 
@@ -451,9 +509,9 @@ header {
 
   .progressBar li::after {
     width: 8px;
-    height: calc(80px);
+    height: calc(100px);
     left: 21px;
-    top: -40px;
+    top: -50px;
   }
 
   .progressBar li:first-child::after {
@@ -513,6 +571,24 @@ header {
       display: block !important;
     }
   }
+
+  .lang-controls{
+    flex-wrap: wrap;
+  }
+
+  .text-area-result{
+    width: 100%;
+    gap: 5px !important;
+
+    textarea{
+      width: 50%;
+      min-height: 250px;
+    }
+    #result{
+      width: 50%;
+
+    }
+  }
 }
 
 @media (max-width: 915px) {
@@ -528,9 +604,8 @@ header {
     .languages-cont {
       justify-content: center;
     }
-
     .intro-pic img {
-      width: 70vw !important;
+      width: 80vw !important;
     }
   }
 }

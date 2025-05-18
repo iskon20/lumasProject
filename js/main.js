@@ -1,3 +1,6 @@
+// const DOMEN = 'http://127.0.0.1:3000'
+const DOMEN = 'https://lumasback-production.up.railway.app'
+
 document.getElementById("image").addEventListener("change", function () {
   const fileName = this.files[0] ? this.files[0].name : "Нет файла";
   document.querySelector(".icon-attach").style.display = "none";
@@ -68,7 +71,7 @@ function registerUser() {
       formData.append("avatar", avatarFile);
     }
 
-    fetch("https://lumasback-production.up.railway.app/register", {
+    fetch(`${DOMEN}/register`, {
       method: "POST",
       body: formData,
     })
@@ -95,7 +98,7 @@ function loginUser() {
   const password = document.getElementById("loginPassword").value;
 
   if (username != "" && password != "") {
-    fetch("https://lumasback-production.up.railway.app/login", {
+    fetch(`${DOMEN}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -121,7 +124,7 @@ function loginUser() {
 
 function fetchMessages() {
   document.getElementById("modalOverlay").style.display = "none";
-  fetch("https://lumasback-production.up.railway.app/getMessages")
+  fetch(`${DOMEN}/getMessages`)
     .then((response) => response.json())
     .then((messages) => {
       const wall = document.getElementById("wall");
@@ -183,7 +186,7 @@ function postMessageWithImage() {
     formData.append("image", image);
   }
 
-  fetch("https://lumasback-production.up.railway.app/postMessageWithImage", {
+  fetch(`${DOMEN}/postMessageWithImage`, {
     method: "POST",
     headers: {
       Authorization: token,
@@ -200,7 +203,7 @@ function postMessageWithImage() {
 }
 
 const eventSource = new EventSource(
-  "https://lumasback-production.up.railway.app/events"
+  `${DOMEN}/events`
 );
 eventSource.onmessage = function (event) {
   if (event.data === "update") {

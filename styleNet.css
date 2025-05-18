@@ -159,6 +159,8 @@ body {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.3s ease;
+
+  font-family: 'Kanit', sans-serif;
 }
 
 .modal-content {

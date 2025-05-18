@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="assets/img/symbol.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
       rel="stylesheet"
@@ -16,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Lumos</title>
   </head>
   <body>
     <header>
@@ -32,9 +34,9 @@
 
           <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#ourGoals">Our Goals</a></li>
+            <li><a href="index.html#ourGoals">Our Tools</a></li>
             <li><a href="index.html#learners">Our Learners</a></li>
-            <li><a href="">Translater</a></li>
+            <li><a href="assets/html/translater.html">Translater</a></li>
             <li><a href="assets/html/gpt.html">ChatGPT</a></li>
             <li><a href="assets/html/AjouNet.html">Community Chat</a></li>
           </ul>
@@ -42,7 +44,7 @@
       </div>
 
       <div class="header-intro">
-        <div class="intro-text">
+        <div data-aos="flip-right" data-aos-duration="1000" class="intro-text">
           <h1>
             Which <em>language</em> <br />
             do you want to <br />
@@ -87,38 +89,37 @@
             </div>
           </div>
         </div>
-        <div class="intro-pic">
+        <div class="intro-pic" data-aos-duration="1000" data-aos="fade-up">
           <img src="assets/img/homePagePic.webp" alt="" />
         </div>
       </div>
     </header>
 
-    <div id="ourGoals" class="separator">Our Goals</div>
+    <div id="ourGoals" class="separator">Our Tools</div>
 
-    <ul class="progressBar">
-      <li>Some Text will be here</li>
-      <li>Some Text will be here</li>
-      <li>Some Text will be here</li>
-      <li>Some Text will be here</li>
-      <li>Some Text will be here</li>
+    <ul class="progressBar" data-aos="flip-left" data-aos-duration="1000">
+      <li>Language learning onlinе <br> community (with AR glasses )</li>
+      <li>AI voice assistant</li>
+      <li>AI teaching assistant</li>
+      <li>Real time translator</li>
     </ul>
 
     <section id="learners" class="learners">
       <h1>What our learners are saying</h1>
 
       <div class="comment-cont">
-        <div class="comment-card">
+        <div class="comment-card" data-aos="zoom-in" data-aos-duration="1400">
           <img src="assets/img/rate.webp" alt="" />
           <p>
-            “Memrise has been a foundational tool for me, especially the clips
-            of native speakers. These help me mimic accents and embrace the
+            Lumos has been a foundational tool for me, especially the clips of
+            native speakers. These help me mimic accents and embrace the
             language more fully. The quick, bite-sized lessons are perfect for
-            my busy schedule. I've tried many apps, but Memrise is one of the
-            few that makes me genuinely happy with my progress.”
+            my busy schedule. I've tried many apps, but Lumos is one of the few
+            that makes me genuinely happy with my progress.”
           </p>
           <h3>Voloúre</h3>
         </div>
-        <div class="comment-card">
+        <div class="comment-card" data-aos="zoom-in-up" data-aos-duration="1400">
           <img src="assets/img/rate.webp" alt="" />
           <p>
             "Best app for getting experience listening and interacting with
@@ -127,13 +128,13 @@
           </p>
           <h3>Beth Williams</h3>
         </div>
-        <div class="comment-card">
+        <div class="comment-card" data-aos="zoom-in-down" data-aos-duration="1400">
           <img src="assets/img/rate.webp" alt="" />
           <p>
             "My Fiancé is Portuguese so I wanted to learn their language to
             communicate easily. Over the year I can now string small sentences
             together. I don't think I could of done it without the help of
-            Memrise."
+            Lumos."
           </p>
           <h3>Lewis Williams</h3>
         </div>
@@ -149,6 +150,10 @@
       });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

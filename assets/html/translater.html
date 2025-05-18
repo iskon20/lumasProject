@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../assets/img/symbol.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Translater</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <nav>
+          <a href="../../index.html">
+            <div class="logo">
+              <img src="../../assets/img/logo.png" alt="logo" />
+            </div>
+          </a>
+
+          <div class="burger" id="burger">☰</div>
+
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#ourGoals">Our Goals</a></li>
+            <li><a href="../../index.html#learners">Our Learners</a></li>
+            <li><a href="translater.html">Translater</a></li>
+            <li><a href="gpt.html">ChatGPT</a></li>
+            <li><a href="AjouNet.html">Community Chat</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section
+      class="translater-section"
+      data-aos="flip-left"
+      data-aos-duration="1000"
+    >
+      <h1>Translater</h1>
+
+      <div class="lang-controls">
+        <select id="sourceLang">
+          <option value="ru">Русский</option>
+          <option value="en">Английский</option>
+          <option value="de">Немецкий</option>
+          <option value="fr">Французский</option>
+          <option value="es">Испанский</option>
+          <option value="it">Итальянский</option>
+          <option value="zh">Китайский</option>
+          <option value="ja">Японский</option>
+          <option value="ko">Корейский</option>
+          <option value="tr">Турецкий</option>
+          <option value="uk">Украинский</option>
+          <option value="pl">Польский</option>
+          <option value="pt">Португальский</option>
+        </select>
+        <button id="swapLangs">⇄</button>
+        <select id="targetLang">
+          <option value="en">Английский</option>
+          <option value="ru">Русский</option>
+          <option value="de">Немецкий</option>
+          <option value="fr">Французский</option>
+          <option value="es">Испанский</option>
+          <option value="it">Итальянский</option>
+          <option value="zh">Китайский</option>
+          <option value="ja">Японский</option>
+          <option value="ko">Корейский</option>
+          <option value="tr">Турецкий</option>
+          <option value="uk">Украинский</option>
+          <option value="pl">Польский</option>
+          <option value="pt">Португальский</option>
+        </select>
+        <button onclick="translateText()">Translate Text</button>
+      </div>
+
+      <div class="text-area-result">
+        <textarea id="text" placeholder="Write Text To Translate..."></textarea>
+
+        <div id="result">
+          <div id="loader"></div>
+          <div id="translation">Result</div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const navLinks = document.getElementById("nav-links");
+
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="../../js/translater.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

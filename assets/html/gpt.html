@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="../img/symbol.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
       rel="stylesheet"
@@ -16,13 +18,13 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>AI</title>
   </head>
   <body>
     <header>
       <div class="nav-container">
         <nav>
-          <a href="index.html">
+          <a href="../../index.html">
             <div class="logo">
               <img src="../../assets/img/logo.png" alt="logo" />
             </div>
@@ -34,7 +36,7 @@
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../index.html#ourGoals">Our Goals</a></li>
             <li><a href="../../index.html#learners">Our Learners</a></li>
-            <li><a href="">Translater</a></li>
+            <li><a href="translater.html">Translater</a></li>
             <li><a href="gpt.html">ChatGPT</a></li>
             <li><a href="AjouNet.html">Community Chat</a></li>
           </ul>
@@ -42,7 +44,11 @@
       </div>
     </header>
 
-    <section class="chat-with-gpt">
+    <section
+      class="chat-with-gpt"
+      data-aos="flip-left"
+      data-aos-duration="1000"
+    >
       <h1>Chat with AI Assistent</h1>
       <div class="gpt-cont">
         <div class="user-cont">
@@ -59,7 +65,7 @@
       </div>
     </section>
 
-    <section class="speaking-with-chat">
+    <section class="speaking-with-chat" data-aos-duration="600" data-aos="flip-right">
       <h1>Speaking With Your AI Assistent</h1>
       <div onclick="startRecognition()" id="startRecord" class="startRecord">
         <h2>Tap To Talk</h2>
@@ -85,12 +91,6 @@
       <p id="result"></p>
     </section>
 
-    <!-- <div>
-      <button onclick="startRecognition()">🎙️ Говорить</button>
-      <button onclick="speakText('Прверка связи')">➡️ тест</button>
-      <button onclick="sendToGPT('Прверка связи')">➡️ gpt</button>
-    </div> -->
-
     <script>
       const burger = document.getElementById("burger");
       const navLinks = document.getElementById("nav-links");
@@ -101,6 +101,10 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
     <script src="../../js/connectionGpt.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../../js/main.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
